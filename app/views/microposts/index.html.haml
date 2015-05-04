@@ -1,0 +1,24 @@
+%p#notice= notice
+%h1 Micropoos
+= flash[:alert]
+%table
+  %thead
+    %tr
+      %th Content
+      %th User
+      %th{:colspan => "3"}
+  %tbody
+    - @microposts.each do |micropost|
+      %tr
+        %td
+          = micropost.content
+          = image_tag micropost.image.url(:thumb).to_s if micropost.image?
+        %td= micropost.user.email
+        %td= link_to 'Show', micropost
+        - if can? :update, micropost
+          %td= link_to 'Edit', edit_micropost_path(micropost)
+        - if can? :destroy, micropost
+          %td= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' }
+= will_paginate
+%br/
+= link_to 'New Micropost', new_micropost_path

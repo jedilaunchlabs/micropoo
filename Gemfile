@@ -11,7 +11,6 @@ gem 'will_paginate', 	'3.0.7'
 gem 'faker',			'1.4.2'
 gem 'carrierwave', 		'0.10.0'
 gem 'rmagick', 			'2.15.0'
-
 gem 'haml-rails', 		'0.9.0'
 
 gem 'bootstrap-sass', 	'3.3.4.1'
@@ -55,5 +54,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  gem 'hpricot', 		'0.8.6'
+  gem 'ruby_parser', 	'3.6.6'
 end
 

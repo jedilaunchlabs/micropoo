@@ -94,6 +94,7 @@ GEM
       haml (>= 4.0.6, < 5.0)
       html2haml (>= 1.0.1)
       railties (>= 4.0.1)
+    hpricot (0.8.6)
     html2haml (2.0.0)
       erubis (~> 2.7.0)
       haml (~> 4.0.0)
@@ -209,10 +210,12 @@ DEPENDENCIES
   devise (= 3.4.1)
   faker (= 1.4.2)
   haml-rails (= 0.9.0)
+  hpricot (= 0.8.6)
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.1)
   rmagick (= 2.15.0)
+  ruby_parser (= 3.6.6)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring
