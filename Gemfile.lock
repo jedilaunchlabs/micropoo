@@ -152,6 +152,7 @@ GEM
     request_store (1.1.0)
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
+    rmagick (2.15.0)
     ruby_parser (3.6.6)
       sexp_processor (~> 4.1)
     sass (3.4.13)
@@ -211,6 +212,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   rails (= 4.2.1)
+  rmagick (= 2.15.0)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spring

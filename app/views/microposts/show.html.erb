@@ -3,6 +3,7 @@
 <p>
   <strong>Content:</strong>
   <%= @micropost.content %>
+  <%= image_tag @micropost.image.url.to_s if @micropost.image? %>
 </p>
 
 <p>
