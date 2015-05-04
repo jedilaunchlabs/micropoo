@@ -1,6 +1,9 @@
 class MicropostsController < ApplicationController
+
   before_action :set_micropost, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, except: [:index, :show]
+
+  load_and_authorize_resource
 
   # GET /microposts
   # GET /microposts.json
@@ -21,6 +24,8 @@ class MicropostsController < ApplicationController
 
   # GET /microposts/1/edit
   def edit
+    @micropost = Micropost.find(params[:id])
+    authorize! :update, @micropost
   end
 
   # POST /microposts

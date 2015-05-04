@@ -1,6 +1,9 @@
 <p id="notice"><%= notice %></p>
 
+
 <h1>Micropoos</h1>
+
+<%= flash[:alert] %>
 
 <table>
   <thead>
@@ -18,10 +21,14 @@
         <td><%= micropost.user.email %></td>
         <td><%= link_to 'Show', micropost %></td>
 
-        <% if micropost.user == current_user %>
+        <% if can? :update, micropost  %>
           <td><%= link_to 'Edit', edit_micropost_path(micropost) %></td>
+        <% end %>
+
+        <% if can? :destroy, micropost  %>
           <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
+        
 
       </tr>
     <% end %>
