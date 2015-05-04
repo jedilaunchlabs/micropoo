@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
   # GET /microposts
   # GET /microposts.json
   def index
-    @microposts = Micropost.all
+    @microposts = Micropost.paginate :per_page => 5, :page => params[:page]
   end
 
   # GET /microposts/1

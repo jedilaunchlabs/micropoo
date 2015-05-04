@@ -13,9 +13,9 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
   <tbody>
     <% @microposts.each do |micropost| %>
+
       <tr>
         <td><%= micropost.content %></td>
         <td><%= micropost.user.email %></td>
@@ -28,12 +28,13 @@
         <% if can? :destroy, micropost  %>
           <td><%= link_to 'Destroy', micropost, method: :delete, data: { confirm: 'Are you sure?' } %></td>
         <% end %>
-        
-
       </tr>
+
     <% end %>
   </tbody>
 </table>
+
+<%= will_paginate %>
 
 <br>
 

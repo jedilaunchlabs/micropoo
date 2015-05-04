@@ -7,8 +7,9 @@ gem 'rails', '4.2.1'
 gem 'devise', 			'3.4.1'
 gem 'cancan', 			'1.6.10'
 gem 'authlogic', 		'3.4.5'
-
 gem 'will_paginate', 	'3.0.7'
+gem 'faker',			'1.4.2'
+
 gem 'carrierwave', 		'0.10.0'
 gem 'haml-rails', 		'0.9.0'
 
